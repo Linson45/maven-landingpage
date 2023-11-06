@@ -1,0 +1,74 @@
+/* VARIABLES */
+/* Font Families */
+$roboto: 'Space Grotesk', sans-serif;
+
+/* Fonts to be used by the entire site */
+$font-primary: $roboto;
+
+/* Colors */
+$black: #000;
+$white: #fff;
+$purple: #B349E7;
+$purple-100:#5253B2;
+$purple-dark:#170E22;
+$purple-dark-100:#0B151E;
+$purple-dark-200:#0B0710;
+$grey: #D0D3D6;
+$grey-100: #E8E9EB;
+$grey-200: #889098;
+$grey-dark:#1B191F;
+
+// Color helpers
+$text-primary: $purple;
+$text-secondary: $grey;
+$color-body: $purple-dark;
+
+
+%purple-bg-grad {
+  background: $purple;
+  background: linear-gradient(to right, $purple, $purple-100);
+}
+
+%purple-dark-bg-grad {
+  background: $purple-dark;
+  background: linear-gradient(to bottom, $purple-dark, $purple-dark-100);
+}
+
+/* Base font size */
+$font-size-base:14px;
+/* Paragraphs fontsize */
+$font-size-para: 20px;
+
+/* Font Weight */
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+/* Background Colors */
+$bg-color: (
+  black: $black,
+  white: $white,
+  grey-dark: $grey-dark,
+  purple: $purple-100,
+  purple-dark: $purple-dark-200,
+  purple-dark2: $purple-dark-200
+);
+
+/* Text Colors */
+$text-color: (
+  purple: $purple,
+  white: $white,
+  grey: $grey-100,
+  grey2: $grey-200
+);
+
+/* Grid breakpoints */
+// Override bootstrap breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxl-1600: 1600px) !default;
