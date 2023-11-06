@@ -3,7 +3,7 @@ header {
         padding: 0;
         top: 47px;
     }
-    .nav {
+    .navbar-nav {
         gap: 8px;
         a {
             @include text-gradient(linear-gradient(83deg, $grey 10%, $white 90%));
