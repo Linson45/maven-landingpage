@@ -1,0 +1,76 @@
+/* HEADINGS */
+h1 {
+    font: $font-weight-bold 28px/40px $font-primary;
+    @include font-size(28px);
+    @include media-breakpoint-up(md) {
+        @include font-size(72px);
+        line-height: 86px;
+        margin-bottom: 15px;
+    }
+    @include text-gradient(linear-gradient(83deg, $purple 10%, $purple-100 90%));
+}
+
+h2 {
+    font: $font-weight-bold 24px/24px $font-primary;
+    @include font-size(24px);
+    @include media-breakpoint-up(md) {
+        @include font-size(50px);
+        line-height: 66px;
+    }
+    @include text-gradient(linear-gradient(83deg, $purple 10%, $purple-100 90%));
+}
+
+h3 {
+    font: $font-weight-bold 12px/16px $font-primary;
+    @include font-size(12px);
+    color: $purple;
+    @include media-breakpoint-up(md) {
+        @include font-size(28px);
+        line-height: 40px;
+    }
+}
+
+h4 {
+    font: $font-weight-bold 14px/22px $font-primary;
+    @include font-size(14px);
+    color: $purple;
+    @include media-breakpoint-up(md) {
+        @include font-size(18px);
+        line-height: 24px;
+    }
+}
+
+h5 {
+    font: $font-weight-bold 14px/22px $font-primary;
+    @include font-size(14px);
+    color: $grey-100;
+    @include media-breakpoint-up(md) {
+        @include font-size(16px);
+        line-height: 24px;
+    }
+}
+
+  /* Paragraphs */
+p,
+%paragraph-default {
+    font: $font-weight-normal 10px/20px $font-primary;
+    @include font-size(10px);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    line-height: 13px;
+    @include media-breakpoint-up(md) {
+        @include font-size(14px);
+        line-height: 20px;
+    }
+}
+
+%paragraph-large,
+.section-heading p,
+.content p {
+    font: $font-weight-light 14px/20px $font-primary;
+    @include font-size(14px);
+    @include media-breakpoint-up(md) {
+        @include font-size(20px);
+        line-height: 20px;
+    }
+}

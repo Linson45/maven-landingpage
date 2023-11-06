@@ -1,0 +1,104 @@
+.banner-section {
+    .banner-background-image {
+        img {
+            object-fit: cover;
+            width: 100%;
+            object-position: top center;
+            @include media-breakpoint-up(md) {
+                height: 802px;
+            }
+
+        }
+    }
+    .banner-content {
+        padding-top: 200px;
+        p {
+            max-width: 390px;
+        }
+    }
+    .btn-group {
+        gap: 12px;
+        @include media-breakpoint-up(md) {
+            gap: 16px;
+            padding: 30px 0 84px;
+        }
+    }
+    .intro-video {
+        gap: 15px;
+        img {
+            @include media-breakpoint-up(md) {
+                width: 100px;
+            }
+        }
+    }
+    .banner-image {
+        @include media-breakpoint-up(md) {
+            width: 750px;
+            right: -45px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.approved-matches-section {
+    .banner-image img {
+        margin-top: 70px;
+        @include media-breakpoint-up(xl) {
+            width: 1200px;
+        }
+    }
+}
+
+.verified-profiles-section {
+    .section-heading {
+        max-width: 730px;
+    }
+    .note-text {
+        width: 317px;
+        position: absolute;
+        right: 0;
+    }
+    .banner-image img {
+        margin-top: 70px;
+        @include media-breakpoint-up(xl) {
+            width: 1114px;
+        }
+    }
+    .banner-team-member img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+    .team-note {
+        img {
+            position: absolute;
+            left: -95px;
+            top: -30px;
+            @include media-breakpoint-up(md) {
+                width: 92px;
+            }
+        }
+        p {
+            max-width: 360px;
+        }
+    }
+    .team-info {
+        h4 {
+            color: $text-secondary;
+            @include font-size(12px);
+            line-height: 20px;
+            margin-bottom: 12px;
+            @include media-breakpoint-up(md) {
+                @include font-size(32px);
+            }
+        }
+        p {
+            max-width: 150px;
+            margin-bottom: 40px;
+        }
+    }
+}
+

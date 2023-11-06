@@ -1,0 +1,15 @@
+header {
+    .navbar {
+        padding: 0;
+        top: 47px;
+    }
+    .nav {
+        gap: 8px;
+        a {
+            @include text-gradient(linear-gradient(83deg, $grey 10%, $white 90%));
+            &:hover {
+                @include text-gradient(linear-gradient(83deg, $purple 10%, $purple-100 90%));
+            }
+        }
+    }
+}

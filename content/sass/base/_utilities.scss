@@ -1,0 +1,51 @@
+/* Helpers */
+// Background colors classes
+@each $bg-color,
+$color in $bg-color {
+  .bg-#{$bg-color} {
+    background: $color  !important;
+  }
+}
+
+// Text colors classes
+@each $text-color,
+$color in $text-color {
+  .text-#{$text-color} {
+    color: $color  !important;
+  }
+}
+
+.purple-border-grad {
+  border: 2px solid transparent; /* Start with a transparent border */
+  background: transparent;
+  border-image: linear-gradient(83deg, $purple 38%, $purple-100 100%);
+  border-image-slice: 1;
+}
+
+.border-rounded-4 {
+  border-radius: 4px;
+}
+
+.border-rounded-40 {
+  border-radius: 40px;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.pt-140 {
+  padding: 140px 0 0;
+}
+
+.py-140 {
+  padding: 140px 0;
+}
+
+.bg-purple-dark-grad {
+  @extend %purple-dark-bg-grad;
+}
+
+.bg-purple-dark-grad2 {
+  @extend %purple-dark-bg-grad2;
+}

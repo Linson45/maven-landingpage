@@ -1,0 +1,38 @@
+.container {
+    @include media-breakpoint-up(xl) {
+        max-width: 1230px;
+    }
+}
+
+.image-text-block {
+    .row {
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+        .col  {
+            flex: 0;
+        }
+    }
+    .bg-grad-blur {
+        width: 241px;
+        height: 302px;
+        background: grey;
+        border-radius: 35%;
+    }
+    .media {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 10px 0;
+        h5 {
+            padding: 10px 25px 10px;
+        }
+    }
+}
+
+.section-heading {
+    p {
+        max-width: 976px;
+        margin: 0 auto;
+    }
+}
