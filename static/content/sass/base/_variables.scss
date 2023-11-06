@@ -13,6 +13,8 @@ $purple-100:#5253B2;
 $purple-dark:#170E22;
 $purple-dark-100:#0B151E;
 $purple-dark-200:#0B0710;
+$purple-dark-300: #47375E;
+$purple-dark-400: #131017;
 $grey: #D0D3D6;
 $grey-100: #E8E9EB;
 $grey-200: #889098;
@@ -39,6 +41,10 @@ $color-body: $purple-dark;
   background: linear-gradient(to top, $purple-dark, $purple-dark-100);
 }
 
+%purple-bg-grad3 {
+  background: $purple-dark-300;
+  background: linear-gradient(to bottom, $purple-dark-300, $purple-dark-400);
+}
 /* Base font size */
 $font-size-base:16px;
 /* Paragraphs fontsize */

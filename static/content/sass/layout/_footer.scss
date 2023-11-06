@@ -86,7 +86,7 @@ footer {
 }
 
 .floating-social-icons {
-    position: fixed;
+    position: absolute;
     top: 50%;
     right: 24px;
     @include prefix(transform, translateY(-50%));
@@ -98,9 +98,9 @@ footer {
     .social-icon {
         display: block;
         margin-bottom: 12px;
-      }
+    }
       
-      .social-icon img {
+    .social-icon img {
         width: 32px;
         height: 32px;
         border: none;
@@ -108,5 +108,5 @@ footer {
             width: 45px;
             height: 45px;
         }
-      }
+    }
 }

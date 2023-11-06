@@ -4,12 +4,59 @@ header {
         top: 47px;
     }
     .navbar-nav {
-        gap: 8px;
+        gap: 20px;
         a {
             @include text-gradient(linear-gradient(83deg, $grey 10%, $white 90%));
             &:hover {
                 @include text-gradient(linear-gradient(83deg, $purple 10%, $purple-100 90%));
             }
+        }
+    }
+    .btn-contact {
+        @extend .purple-border-grad;
+        @extend .border-rounded-4;
+        a {
+            text-align: center;
+        }
+    }
+
+    .navbar-toggler {
+        position: relative;
+        z-index: 2;
+        &.collapsed {
+            .navbar-toggler-icon {
+                background: url('../images/style-images/hamburger-menu.svg') right center / 32px auto no-repeat;
+            }
+        }
+        .navbar-toggler-icon {
+            background: url('../images/style-images/icon-close.svg') right center / 20px auto no-repeat;
+        }
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        width: calc(100% - 24px);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin-left: 24px;
+        right: 0;
+
+        .navbar-nav {
+            height: 100vh !important;
+            padding: 65px 24px;
+            width: 100%;
+            @extend %purple-bg-grad3;
+            backdrop-filter: blur(10px) brightness(115%);
+        }
+        .btn-contact {
+            position: absolute;
+            bottom: 56px;
+            width: 100%;
+            left: 50%;
+            max-width: 303px;
+            margin: 0 auto;
+            @include prefix(transform, translateX(-50%));
         }
     }
 }
