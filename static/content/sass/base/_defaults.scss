@@ -18,6 +18,9 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
+    &.navbar-fixed {
+        overflow: hidden;
+    }
 }
 
 p,

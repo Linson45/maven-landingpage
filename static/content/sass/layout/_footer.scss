@@ -1,5 +1,13 @@
 footer {
 
+    .logo-image img {
+        width: 31px;
+        margin-bottom: 15px;
+        @include media-breakpoint-up(md) {
+            width: 56px;
+        }
+    }
+
     h4 {
         margin-bottom: 20px;
     }

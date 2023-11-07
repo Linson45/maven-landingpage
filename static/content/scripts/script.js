@@ -7,6 +7,9 @@ $(document).ready(function() {
             $('.video-modal .video-iframe').attr("src", $(".video-modal  .video-iframe").attr("src"));
         });
     }
+    $(".navbar-toggler").click(function() {
+        $("body").toggleClass("navbar-fixed");
+    });
 });
 
 
