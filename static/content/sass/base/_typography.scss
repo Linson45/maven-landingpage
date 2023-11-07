@@ -2,10 +2,14 @@
 h1 {
     font: $font-weight-bold 28px/40px $font-primary;
     @include font-size(28px);
+    margin-bottom: 15px;
     @include media-breakpoint-up(md) {
+        @include font-size(32px);
+        line-height: 40px;
+    }
+    @include media-breakpoint-up(lg) {
         @include font-size(72px);
         line-height: 86px;
-        margin-bottom: 15px;
     }
     @include text-gradient(linear-gradient(83deg, $purple 10%, $purple-100 90%));
 }
@@ -70,7 +74,10 @@ p,
     font: $font-weight-light 14px/20px $font-primary;
     @include font-size(14px);
     @include media-breakpoint-up(md) {
-        @include font-size(20px);
+        @include font-size(16px);
         line-height: 20px;
+    }
+    @include media-breakpoint-up(lg) {
+        @include font-size(20px);
     }
 }

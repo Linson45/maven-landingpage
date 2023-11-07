@@ -92,29 +92,3 @@ footer {
         }
     }
 }
-
-.floating-social-icons {
-    position: absolute;
-    top: 50%;
-    right: 24px;
-    @include prefix(transform, translateY(-50%));
-    @include media-breakpoint-up(md) {
-        left: 32px;
-        right: auto;
-    }
-
-    .social-icon {
-        display: block;
-        margin-bottom: 12px;
-    }
-      
-    .social-icon img {
-        width: 32px;
-        height: 32px;
-        border: none;
-        @include media-breakpoint-up(md) {
-            width: 45px;
-            height: 45px;
-        }
-    }
-}

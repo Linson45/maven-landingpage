@@ -73,12 +73,23 @@
     <main>
 
         <!-- Banner slider section -->
-        <section class="banner-section bg-purple-dark-grad" style="margin-bottom: 100px;">
+        <section class="banner-section bg-purple-dark-grad2 position-relative" style="margin-bottom: 100px;">
             <div class="banner-background-image position-absolute w-100 d-none d-lg-block">
                 <picture>
-                    <source srcset="content/images/content-images/banner-section-background.jpeg">
-                    <img src="content/images/content-images/banner-section-background.jpeg" alt="Banner section background image" width="1920" height="1068">
+                    <source srcset="content/images/content-images/banner-section-background.jpg">
+                    <img src="content/images/content-images/banner-section-background.jpg" alt="Banner section background image" width="1920" height="1068">
                 </picture>
+            </div>
+            <div class="floating-social-icons">
+                <a href="#" class="social-icon">
+                <img src="content/images/style-images/icon-youtube.svg" alt="Google" width="45" height="45">
+                </a>
+                <a href="#" class="social-icon">
+                <img src="content/images/style-images/icon-insta.svg" alt="Instagram" width="45" height="45">
+                </a>
+                <a href="#" class="social-icon">
+                <img src="content/images/style-images/icon-meta.svg" alt="Meta" width="45" height="45">
+                </a>
             </div>
             <div class="container banner-content">
                 <div class="row">
@@ -90,16 +101,14 @@
                                 <div class="btn-app-store">
                                     <picture>
                                         <source media="(min-width:992px)" srcset="content/images/style-images/btn-app-store.svg">
-                                        <source media="(min-width:576px)" srcset="content/images/style-images/btn-app-store.svg">
-                                        <source media="" srcset="content/images/style-images/btn-app-store.svg">
+                                        <source media="" srcset="content/images/style-images/btn-app-store-mobile.svg">
                                         <img src="content/images/style-images/btn-app-store.svg" alt="App store button" width="133" height="51">
                                     </picture>
                                 </div>
                                 <div class="btn-play-store">
                                     <picture>
                                         <source media="(min-width:992px)" srcset="content/images/style-images/btn-play-store.svg">
-                                        <source media="(min-width:576px)" srcset="content/images/style-images/btn-play-store.svg">
-                                        <source media="" srcset="content/images/style-images/btn-play-store.svg">
+                                        <source media="" srcset="content/images/style-images/btn-play-store-mobile.svg">
                                         <img src="content/images/style-images/btn-play-store.svg" alt="Play store button" width="133" height="51">
                                     </picture>
                                 </div>
@@ -122,12 +131,13 @@
                         <div class="user-count d-flex justify-content-end">
                             <picture>
                                 <source srcset="content/images/content-images/user-count.svg">
-                                <img src="content/images/content-images/user-count.svg" alt="Maven user count" width="320" height="89" style="width: 320px;">
+                                <img src="content/images/content-images/user-count.svg" alt="Maven user count" width="320" height="89">
                             </picture>
                         </div>
                         <div class="banner-image position-absolute">
                             <picture>
-                                <source srcset="content/images/content-images/banner-couples-holding-hands.png">
+                                <source media="(min-width:992px)" srcset="content/images/content-images/banner-couples-holding-hands.png">
+                                <source srcset="content/images/content-images/banner-couples-holding-hands-mobile.png">
                                 <img src="content/images/content-images/banner-couples-holding-hands.png" alt="Banner Couples holding hands" width="778" height="519">
                             </picture>
                         </div>
@@ -174,8 +184,8 @@
                                     <div class="media bg-grad-blur">
                                         <div class="img-block">
                                             <picture>
-                                                <source srcset="content/images/style-images/icon-meta2.svg">
-                                                <img src="content/images/style-images/icon-meta2.svg" alt="Expand connection" width="98" height="98">
+                                                <source srcset="content/images/style-images/icon-expand-connection.svg">
+                                                <img src="content/images/style-images/icon-expand-connection.svg" alt="Expand connection" width="98" height="98">
                                             </picture>
                                         </div>
                                         <div class="media-body">
@@ -220,8 +230,8 @@
                                     <div class="media bg-grad-blur">
                                         <div class="img-block">
                                             <picture>
-                                                <source srcset="content/images/style-images/icon-meta2.svg">
-                                                <img src="content/images/style-images/icon-meta2.svg" alt="Expand connection" width="98" height="98">
+                                                <source srcset="content/images/style-images/icon-connection-requests.svg">
+                                                <img src="content/images/style-images/icon-connection-requests.svg" alt="Expand connection" width="98" height="98">
                                             </picture>
                                         </div>
                                         <div class="media-body">
@@ -243,8 +253,7 @@
                     <div class="col-md-6 order-md-1">
                         <picture>
                             <source media="(min-width:992px)" srcset="content/images/content-images/banner-maven-app-interface.png">
-                            <source media="(min-width:576px)" srcset="content/images/content-images/banner-maven-app-interface.png">
-                            <source srcset="content/images/content-images/banner-maven-app-interface.png">
+                            <source srcset="content/images/content-images/banner-maven-app-interface-mobile.png">
                             <img src="content/images/content-images/banner-maven-app-interface.png" alt="Maven app interface" width="591" height="719">
                         </picture>
                     </div>
@@ -262,8 +271,7 @@
                 <div class="banner-image">
                     <picture>
                         <source media="(min-width:992px)" srcset="content/images/content-images/banner-maven-matches.png">
-                        <source media="(min-width:576px)" srcset="content/images/content-images/banner-maven-matches.png">
-                        <source srcset="content/images/content-images/banner-maven-matches.png">
+                        <source srcset="content/images/content-images/banner-maven-matches-mobile.png">
                         <img src="content/images/content-images/banner-maven-matches.png" alt="" width="1200" height="496">
                     </picture>
                 </div>
@@ -283,46 +291,47 @@
                 <div class="banner-image text-center">
                     <picture>
                         <source media="(min-width:992px)" srcset="content/images/content-images/banner-verified-profiles.png">
-                        <source media="(min-width:576px)" srcset="content/images/content-images/banner-verified-profiles.png">
-                        <source srcset="content/images/content-images/banner-verified-profiles.png">
+                        <source srcset="content/images/content-images/banner-verified-profiles-mobile.png">
                         <img src="content/images/content-images/banner-verified-profiles.png" alt="Verified profiles banner" width="1114" height="456">
                     </picture>
                 </div>
-                <div class="bg-grey-dark border-rounded-40">
-                    <div class="text-center py-5">
+                <div class="box-layout bg-grey-dark">
+                    <div class="box-layout-heading text-center">
                         <h3>A Note from Our Team</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur. Sapien tincidunt felis pulvinar cras</p>
+                        <p>"Team Insights: Discover Notes from Our Creators & Visionaries."</p>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 d-flex justify-content-center banner-team-member">
+                        <div class="col-4 d-flex justify-content-center banner-team-member">
                             <picture>
                                 <source media="(min-width:992px)" srcset="content/images/content-images/banner-lucy.png">
-                                <source media="(min-width:576px)" srcset="content/images/content-images/banner-lucy.png">
-                                <source srcset="content/images/content-images/banner-lucy.png">
+                                <source srcset="content/images/content-images/banner-lucy-mobile.png">
                                 <img src="content/images/content-images/banner-lucy.png" alt="Lucy Co Founder" width="278" height="374">
                             </picture>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-8 d-md-flex justify-content-between">
                             <div class="team-note">
                                 <picture>
                                     <source media="(min-width:992px)" srcset="content/images/style-images/icon-quote.svg">
-                                    <source media="(min-width:576px)" srcset="content/images/style-images/icon-quote.svg">
                                     <source srcset="content/images/style-images/icon-quote.svg">
                                     <img src="content/images/style-images/icon-quote.svg" alt="Quote icon" width="92" height="70">
                                 </picture>
                                 <p class="font-weight-bold">Lucy Fernandes</p>
                                 <p class="text-grey2">Co Founder</p>
-                                <p>Lorem ipsum dolor sit amet consectetur. Non magna semper eu orci. Egestas lectus egestas tortor quisque eget ac diam commodo. Ut diam mi ipsum ut volutpat iaculis dolor diam. Sed proin cursus aliquam interdum varius auctor. Lorem ipsum dolor sit amet consectetur. </p>
+                                <p>Lorem ipsum dolor sit amet consectetur. Non magna semper eu orci. Egestas lectus egestas tortor quisque eget ac diam commodo. Ut diam mi ipsum ut volutpat iaculis dolor diam.</p>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="team-info">
-                                <h4>15K+</h4>
-                                <p>Dates and matches everyday</p>
-                                <h4>1458</h4>
-                                <p>New member sign up everyday</p>
-                                <h4>30K+</h4>
-                                <p>Members felis pulvinar cras</p>
+                            <div class="team-info d-flex flex-md-column">
+                                <div class="team-info-item d-flex flex-column">
+                                    <h4>15K+</h4>
+                                    <p>Dates and matches everyday</p>
+                                </div>
+                                <div class="team-info-item flex-column">
+                                    <h4>1458</h4>
+                                    <p>New member sign up everyday</p>
+                                </div>
+                                <div class="team-info-item flex-column">
+                                    <h4>30K+</h4>
+                                    <p>Members felis pulvinar cras</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -442,18 +451,7 @@
                     <p>&copy; 2023 MAVEN MATCH | ALL RIGHTS RESERVED</p>
                 </div>
             </div>
-          </footer>
-        <div class="floating-social-icons">
-            <a href="#" class="social-icon">
-            <img src="content/images/style-images/icon-youtube.svg" alt="Google" width="45" height="45">
-            </a>
-            <a href="#" class="social-icon">
-            <img src="content/images/style-images/icon-insta.svg" alt="Instagram" width="45" height="45">
-            </a>
-            <a href="#" class="social-icon">
-            <img src="content/images/style-images/icon-meta.svg" alt="Meta" width="45" height="45">
-            </a>
-        </div>
+        </footer>
 
     </main>
 
