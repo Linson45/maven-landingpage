@@ -19,12 +19,24 @@
         text-align: center;
         padding: 24px 10px 0;
         margin-right: 16px;
-        width: 241px;
-        height: 302px;
-        background: grey;
-        border-radius: 35%;
+        width: 184px;
+        height: 231px;
+        @include prefix(border-radius, 35%);
+        @include prefix(backdrop-filter, blur(3.83402px));
+        -webkit-backdrop-filter: blur(3.83402px);
+        background: rgba($purple-dark-400, 0.47);
+        // background: linear-gradient(to right, $purple-dark-300, rgba($purple-dark-400, 0.76));
+        // background: linear-gradient(62deg, $purple-dark-300, rgba($purple-dark-400, 0.76));
+        background: linear-gradient(164.09deg, rgba(71, 55, 94, 0.62) -23%, rgba(19, 16, 23, 0.4712) 167.47%);
+        @include media-breakpoint-up(lg) {
+            width: 241px;
+            height: 302px;
+        }
         h5 {
-            padding: 10px 25px 10px;
+            padding: 8px;
+            @include media-breakpoint-up(lg) {
+                padding: 10px 25px 10px;
+            }
         }
         img {
             width: 70px;

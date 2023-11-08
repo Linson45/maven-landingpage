@@ -43,8 +43,8 @@ $color-body: $purple-dark;
 }
 
 %purple-bg-grad3 {
-  background: $purple-dark-300;
-  background: linear-gradient(to bottom, $purple-dark-300, $purple-dark-400);
+  background: rgba($purple-dark-400, 0.45);
+  background: linear-gradient(to bottom, $purple-dark-300, rgba($purple-dark-400, 0.75));
 }
 /* Base font size */
 $font-size-base:16px;

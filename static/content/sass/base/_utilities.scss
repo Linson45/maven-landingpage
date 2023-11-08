@@ -42,6 +42,10 @@ $color in $text-color {
   padding: 140px 0;
 }
 
+.gap-16 {
+  gap: 16px;
+}
+
 .bg-purple-dark-grad {
   @extend %purple-dark-bg-grad;
 }

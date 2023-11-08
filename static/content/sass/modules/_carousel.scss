@@ -2,6 +2,7 @@
     overflow: hidden;
     z-index: 0;
 }
+
 .carousel-control-wrapper {
     position: relative;
     max-width: 100%;
@@ -34,80 +35,93 @@
 }
 
 // Multislide carousel 
-    .multicarousel {
+.multicarousel {
      // Wrapper for the slide container and indicators 
-     .carousel-item {
+    .carousel-item {
         transition-duration: 0.3s;
+        @include prefix(backface-visibility, hidden);
+        @include prefix(transform, translate3d(0, 0, 0));
     }
-     .carousel-item.active, .carousel-item-next, .carousel-item-prev {
-         display: block;
+    .carousel-item.active, 
+    .carousel-item-next, 
+    .carousel-item-prev {
+        display: block;
     }
-     .carousel-item-next, .carousel-item-prev {
-         position: absolute;
-         top: 0;
+    .carousel-item-next, 
+    .carousel-item-prev {
+        position: absolute;
+        top: 0;
     }
-     // CSS3 transforms when supported by the browser 
-     .carousel-item-next.carousel-item-left, 
-     .carousel-item-prev.carousel-item-right {
-         transform: translateX(0);
-         @supports (transform-style: preserve-3d) {
-             transform: translate3d(0, 0, 0);
+    // CSS3 transforms when supported by the browser 
+    .carousel-item-next.carousel-item-left, 
+    .carousel-item-prev.carousel-item-right {
+        transform: translateX(0);
+        @supports (transform-style: preserve-3d) {
+            transform: translate3d(0, 0, 0);
         }
     }
-     .carousel-item-next, 
-     .active.carousel-item-right {
-         transform: translateX(100%);
-         @supports (transform-style: preserve-3d) {
-             transform: translate3d(100%, 0, 0);
+    .carousel-item-next, 
+    .active.carousel-item-right {
+        transform: translateX(100%);
+        @supports (transform-style: preserve-3d) {
+            transform: translate3d(100%, 0, 0);
         }
     }
-     .carousel-item-prev, 
-     .active.carousel-item-left {
-         transform: translateX(-100%);
-         @supports (transform-style: preserve-3d) {
-             transform: translate3d(-100%, 0, 0);
+    .carousel-item-prev, 
+    .active.carousel-item-left {
+        transform: translateX(-100%);
+        @supports (transform-style: preserve-3d) {
+            transform: translate3d(-100%, 0, 0);
         }
     }
 }
+
 .carousel.multicarousel {
-     z-index: 1;
-     position: relative;
-     margin-right: -20px;
-     width: calc(100% + 20px);
-     .carousel-item {
-         &.active, &-next, &-prev {
-             display: flex;
+    z-index: 1;
+    position: relative;
+    margin-right: -20px;
+    width: calc(100% + 20px);
+    .carousel-item {
+        &.active, 
+        &-next, 
+        &-prev {
+            display: flex;
         }
     }
 }
 
 .multicarousel {
-     .carousel-inner {
-         .carousel-item {
-             align-items: stretch;
-             @include media-breakpoint-up(md) {
-                 padding: 0;
-                 align-items: stretch;
+    .carousel-inner {
+        .carousel-item {
+            align-items: stretch;
+            @include media-breakpoint-up(md) {
+                padding: 0;
+                align-items: stretch;
             }
-             &-right.active, &-next {
-                 transform: translateX(91.66667%);
-                 @include media-breakpoint-up(sm) {
-                     transform: translateX(66.66667%);
+            &-right.active, 
+            &-next {
+                transform: translateX(91.66667%);
+                @include media-breakpoint-up(sm) {
+                    transform: translateX(66.66667%);
                 }
             }
-             &-left.active, &-prev {
-                 transform: translateX(-91.66667%);
-                 @include media-breakpoint-up(sm) {
-                     transform: translateX(-66.66667%);
+            &-left.active, 
+            &-prev {
+                transform: translateX(-91.66667%);
+                @include media-breakpoint-up(sm) {
+                    transform: translateX(-66.66667%);
                 }
             }
-             &-right, &-left {
-                 transform: translateX(0);
+            &-right, 
+            &-left {
+                transform: translateX(0);
+            }
+            &-left {
+                opacity: 0.1;
             }
         }
     }
 }
- 
 
 .how-it-works-carousel {
     padding: 26px 0 80px;

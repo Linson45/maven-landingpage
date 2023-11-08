@@ -78,20 +78,34 @@ header {
 
     .navbar-collapse {
         position: fixed;
-        width: calc(100% - 24px);
+        width: 100%;
         top: 0;
         left: 0;
         z-index: 1;
-        margin-left: 24px;
         right: 0;
         overflow: hidden;
+        @include prefix(backdrop-filter, blur(5px));
+        -webkit-backdrop-filter: blur(5px);
 
         .navbar-nav {
             height: 100vh !important;
-            padding: 65px 24px;
+            padding: 65px 24px 65px 48px;
             width: 100%;
-            @extend %purple-bg-grad3;
-            backdrop-filter: blur(10px) brightness(115%);
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                z-index: -2;
+                position: absolute;
+                top: 0;
+                left: 24px;
+                width: 100%;
+                height: 100%;
+                @include prefix(backdrop-filter, blur(10px));
+                -webkit-backdrop-filter: blur(10px);
+                @extend %purple-bg-grad3;
+                overflow: hidden;
+            }
         }
         .btn-contact {
             position: absolute;

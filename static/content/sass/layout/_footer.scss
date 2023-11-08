@@ -91,4 +91,11 @@ footer {
             transition-timing-function: ease; 
         }
     }
+    .footer-social-links {
+        img {
+            @include media-breakpoint-up(lg) {
+                width: 16px;
+            }  
+        }
+    }
 }

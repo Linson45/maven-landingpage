@@ -1,8 +1,8 @@
 let multiCarousel = [];
 
 $(document).ready(function() {
-    CarouselMaxHeight();
 
+    // Fix navabr when opened on mobile
     $(".navbar-toggler").click(function() {
         $("body").toggleClass("navbar-fixed");
     });
@@ -23,39 +23,6 @@ $(document).ready(function() {
 $(window).on("load",function(e) {
     slideCarousel();
 });
-
-
-function CarouselMaxHeight() {
-    let bannerCarousel_id = $('#how-it-works-carousel');
-
-    // Carousel item max height fix
-    if (bannerCarousel_id.length > 0) {
-      let carouselItem = $("#how-it-works-carousel .carousel-item");
-      getMaxHeight(carouselItem);
-    }
-
-    $(window).on('load resize orientationchange', function () {
-        CarouselMaxHeight();
-    });
-}
-
-// Get max height
-function getMaxHeight(element) {
-    let maxHeight = 0;
-    $(element).css('display','block');
-    $(element).each(function(){
-        let maxContent = $(this).find('.max-height-content');
-        if(!maxContent.length > 0) {
-            $(element).wrapInner('<div class="max-height-content"></div>');
-        }
-        let maxHeightContent = maxContent.outerHeight();
-        if(maxHeightContent > maxHeight){
-            maxHeight = maxHeightContent;
-        }
-    });
-    $(element).attr('style','');
-    $(element).css("minHeight", maxHeight);
-}
 
 function slideCarousel() {
     $('.multicarousel').each(function() {
