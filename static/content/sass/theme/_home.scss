@@ -114,7 +114,18 @@
     }
 }
 
+.how-it-works-section {
+    padding: 180px 0 0;
+    @include media-breakpoint-up(lg) {
+        padding: 110px 0 0;
+    }
+}
+
 .approved-matches-section {
+    padding: 60px 0;
+    @include media-breakpoint-up(lg) {
+        padding: 140px 0;
+    }
     .banner-image img {
         margin-top: 70px;
         @include media-breakpoint-up(xl) {
@@ -124,6 +135,10 @@
 }
 
 .verified-profiles-section {
+    padding: 0 0 60px;
+    @include media-breakpoint-up(lg) {
+        padding: 0 0 140px;
+    }
     .section-heading {
         max-width: 730px;
     }

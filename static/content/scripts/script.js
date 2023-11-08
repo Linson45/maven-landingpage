@@ -1,29 +1,36 @@
+let multiCarousel = [];
+
 $(document).ready(function() {
     CarouselMaxHeight();
 
-    // Stop video on close of popup
-    if($('.video-modal').length > 0) {
-        $('.video-modal').on('hidden.bs.modal', function (e) {
-            $('.video-modal .video-iframe').attr("src", $(".video-modal  .video-iframe").attr("src"));
-        });
-    }
     $(".navbar-toggler").click(function() {
         $("body").toggleClass("navbar-fixed");
     });
+
+    // Get data of all the carousel items 
+    $('.multicarousel').each(function() {
+        let carouselID = $(this).attr('id'),
+            carouselObj;
+        $('#' + carouselID + " .carousel-item").each(function(index) {
+            carouselObj = {};
+            carouselObj['name'] = carouselID;
+            carouselObj['data'] = $(this).html();
+            multiCarousel.push(carouselObj);
+        });
+    });
+});
+
+$(window).on("load",function(e) {
+    slideCarousel();
 });
 
 
 function CarouselMaxHeight() {
-    let bannerCarousel_id = $('#banner-carousel'),
-        QuoteCarousel_id = $('#quote-carousel');
+    let bannerCarousel_id = $('#how-it-works-carousel');
 
     // Carousel item max height fix
     if (bannerCarousel_id.length > 0) {
-      let carouselItem = $("#banner-carousel .carousel-item");
-      getMaxHeight(carouselItem);
-    }
-    if (QuoteCarousel_id.length > 0) {
-      let carouselItem = $("#quote-carousel .carousel-item");
+      let carouselItem = $("#how-it-works-carousel .carousel-item");
       getMaxHeight(carouselItem);
     }
 
@@ -48,4 +55,32 @@ function getMaxHeight(element) {
     });
     $(element).attr('style','');
     $(element).css("minHeight", maxHeight);
+}
+
+function slideCarousel() {
+    $('.multicarousel').each(function() {
+        let carouselID = $(this).attr('id'),
+            itemsToSlide = 1;
+        const totalSlides = $('#' + carouselID + ' .carousel-item').length;
+        appendsSlides(itemsToSlide, totalSlides, carouselID)
+    });
+}
+
+// Append slides to each carousel item 
+function appendsSlides(itemsToSlide, totalSlides, carouselID) {
+    let carouselData = multiCarousel.filter(function(obj) {
+        return (obj.name === carouselID);
+    });
+    $('#' + carouselID + " .carousel-item").each(function(index) {
+        $(this).html("");
+        let count = 0;
+        count += itemsToSlide * index;
+        for (let i = 0; i < totalSlides; i++) {
+            if (count >= totalSlides) {
+                count = (count - totalSlides) % totalSlides;
+            }
+            $(this).append(carouselData[count].data);
+            count++;
+        }
+    });
 }

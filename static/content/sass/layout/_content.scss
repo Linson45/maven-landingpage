@@ -13,19 +13,24 @@
             flex: 0;
         }
     }
-    .bg-grad-blur {
-        width: 241px;
-        height: 302px;
-        background: grey;
-        border-radius: 35%;
-    }
     .media {
         align-items: center;
         flex-direction: column;
         text-align: center;
         padding: 24px 10px 0;
+        margin-right: 16px;
+        width: 241px;
+        height: 302px;
+        background: grey;
+        border-radius: 35%;
         h5 {
             padding: 10px 25px 10px;
+        }
+        img {
+            width: 70px;
+            @include media-breakpoint-up(xl) {
+                width: 98px;
+            }
         }
     }
 }
